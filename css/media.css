@@ -1,0 +1,15 @@
+@media (max-width : 767px)
+{
+    #header
+    {
+        .content
+        {
+            h2 
+            {
+                
+                text-wrap: balance;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,344 @@
+:root
+{
+    --head-font : "Pacifico", cursive ;
+    --head2-font : "Righteous", sans-serif;
+    --body-font: "PT Sans Caption", sans-serif;
+    --color-after : #FEC260;
+    --color-btn : #f5a11a;
+    --color-btn-hover : #c07e13;
+    --color-background : #F7ECDE;
+    --color-body : #000;
+    --color-head2_1 :rgb(64, 165, 92);
+    --color-head2_2 :rgb(178, 172, 74);
+    --color-border : #FEC260;
+    --color-focus : #fec26055;
+}
+.dark 
+{
+    --color-background : #37353E;
+    --color-body : #D3DAD9;
+    --color-after : #715A5A;
+    --color-head2_1 : #468A9A;
+    --color-head2_2 : #EEEEEE;
+    --color-border : #D3DAD9;
+    --color-focus :#6bacbba6;
+    --color-btn : #468A9A;
+    --color-btn-hover : #2e5c66;
+
+}
+.red
+{
+    --color-background : #FFE6E1;
+    --color-body : #1687A7;
+    --color-after : #DD0A35;
+    --color-head2_1 : #DD0A35;
+    --color-head2_2 : #1687A7;
+    --color-border : #DD0A35;
+    --color-focus :#d945639f;
+    --color-btn : #DD0A35;
+    --color-btn-hover : #a50727;
+}
+.green
+{
+    --color-background : rgba(246, 252, 223, 0.704);
+    --color-body : #141E46;
+    --color-after : #347928;
+    --color-head2_1 : #347928;
+    --color-head2_2 : #141E46;
+    --color-border : #347928;
+    --color-focus :#456d3d6e;
+    --color-btn : #347928;
+    --color-btn-hover : #215418;
+}
+.blue
+{
+    --color-background : #FFFBDE;
+    --color-body : #aa7e37;
+    --color-after : #0D5EA6;
+    --color-head2_1 : #0D5EA6;
+    --color-head2_2 : #aa7e37;
+    --color-border : #0D5EA6;
+    --color-focus :#3272ab9f;
+    --color-btn : #0D5EA6;
+    --color-btn-hover : #073e6e;
+}
+.purple
+{
+    --color-background : #FFEAD8;
+    --color-body : #9c58b7;
+    --color-after : #640D5F;
+    --color-head2_1 : #640D5F;
+    --color-head2_2 : #9c58b7;
+    --color-border : #640D5F;
+    --color-focus :#6419607d;
+    --color-btn : #8f1789;
+    --color-btn-hover : #4f0b4b;
+}
+.orange
+{
+    --color-background : #E9E3DF;
+    --color-body : #3F7D58;
+    --color-after : #EC5228;
+    --color-head2_1 : #EC5228;
+    --color-head2_2 : #3F7D58;
+    --color-border : #EC5228;
+    --color-focus :#dc4c256e;
+    --color-btn : #EC5228;
+    --color-btn-hover : #ad3b1b;
+}
+.teal
+{
+    --color-background : #DDF4E7;
+    --color-body : #d67c64;
+    --color-after : #26667F;
+    --color-head2_1 : #26667F;
+    --color-head2_2 : #d67c64;
+    --color-border : #26667F;
+    --color-focus :#26667f5b;
+    --color-btn : #26667F;
+    --color-btn-hover : #17495c;
+}
+.valid
+{
+    --color-border : #198754;
+    --color-focus : rgba(25,135,84,.25) ;
+}
+.in-valid
+{
+    --color-border : #dc3545;
+    --color-focus : rgba(220,53,69,.25) ;
+}
+.error
+{
+    transition: all .5s;
+    color : #dc3545;
+}
+.error2
+{
+    transition: all .5s;
+    color : #dc3545;
+}
+.smooth
+{
+    transition: all .5s;
+}
+
+body
+{
+    font-family: var(--body-font);
+
+}
+body::selection
+{
+    background-color: var(--color-after);
+    color: var(--color-body);
+}
+
+#header
+{
+    min-height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-body);
+   .head 
+   {
+     h1 
+    {
+
+        font-family: var(--head-font);
+        font-size: 50px;
+        font-weight: 500;
+        width: fit-content;
+        position: relative;
+        z-index: 2;
+    }
+    h1::after
+    {
+        content: "";
+        width: 100%;
+        height: 35%;
+        background-color: var(--color-after);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .5s;
+    }
+    h1:hover:after
+    {
+        height: 65%;
+    }
+   }
+   .content
+   {
+    border-width: 2px 0 ;
+    border-style: dotted;
+    border-color: var(--color-border);
+    h2 
+    {
+        font-family: var(--head2-font);
+        font-size: 25px;
+        font-weight: 500;
+        background-image: linear-gradient(to right , var(--color-head2_1) 40%, var(--color-head2_2) 60%);
+        background-clip: text;
+        color: transparent;
+       
+    }
+    input[type = "text"]:focus
+    {
+        box-shadow: 0 0 0 0.25rem var(--color-focus);
+        border-color: var(--color-border);
+        border-width: 2px;
+        outline: 0;
+    }
+    input::placeholder
+    {
+        color: gray;
+        opacity: .8;
+    }
+   }
+   .button 
+   {
+    .btn-color 
+    {
+        background-color: var(--color-btn);
+        color: white;
+        transition: all .5s;
+    }
+    .btn-color:hover
+    {
+        background-color: var(--color-btn-hover);
+        transform: scale(1.1 ,1.1);
+        
+    }
+   }
+   .show
+   {
+    background-color: #F8F9FA ;
+    table 
+    {
+        
+        th , td 
+        {
+            padding: 12px;
+            border-bottom: 2px solid #dee2e6;
+        }
+        .btn-visit
+        {
+            
+           transition: all .5s;
+            background-color: var(--color-btn);
+            color: #fff;
+            transition: all .5s;
+            &:hover
+            {
+                background-color: var(--color-btn-hover);
+                transform: scale(1.1 , 1.1);
+            }
+            i 
+            {
+                transition: all .5s;
+            }
+        }
+        .btn-visit:hover i
+        {
+            transform: scale(1.2 , 1.2);
+        }
+        .btn-delete
+        {
+            background-color: #eb0823;
+            color: #fff;
+            transition: all .5s;    
+        &:hover
+        {
+            background-color: #D30820;
+            transform: scale(1.1 , 1.1);
+        }
+         i 
+            {
+                transition: all .5s;
+            }
+        }
+         .btn-delete:hover i
+        {
+            transform: scale(1.2 , 1.2);
+        }
+       
+    }
+   }
+ 
+}
+
+.color
+{
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    position: absolute;
+    top: 25%;
+    cursor: pointer;
+   
+
+    .content-bro
+    {
+        position: absolute;
+        top: -70%;
+        left: 105%;
+        width: 100px;
+        background-color: #ddd;
+        padding: 5px;
+        border-radius: 5px;
+        display: none; 
+        animation: show 1s;  
+        i 
+        {
+            font-size: 20px;
+            margin: 5px;
+        }
+         .red
+         {
+            color: red;
+         }
+         .green
+         {
+            color: green;
+         }
+         .blue
+         {
+            color: blue;
+         }
+         .orange
+         {
+            color: orangered;
+         }
+         .purple
+         {
+            color: purple;
+         }
+         .teal
+         {
+            color: teal;
+         }
+
+    }
+}
+.color:hover .content-bro
+{
+    display: block; 
+  
+}
+
+@keyframes show 
+{
+    0%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: .5s;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}

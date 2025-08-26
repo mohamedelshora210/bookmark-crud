@@ -1,0 +1,94 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="website to book mark">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Bookmark</title>
+</head>
+<body>
+    <section id="header" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <div class="head pb-2">
+              <h1 class="m-auto mb-5">Bookmarker</h1>
+            </div><!--head-->
+            <div class="content py-4">
+              <h2 class="text-center mb-5"><i class="fas fa-bookmark"></i> Bookmark your favorite sites <i class="fas fa-bookmark"></i></h2>
+              <div class="controll">
+
+                <div class="mb-4">
+                  <label for="bookmarkName" class="form-label fw-bold"><i class="fas fa-book-bookmark me-2"></i> Site Name</label>
+                  <input type="text" class="form-control" id="bookmarkName" placeholder="Bookmark Name">
+                  <p id="error" class="ps-2 opacity-0">Site name must contain at least 3 characters</p>
+                </div>
+
+                <div class="mb-4">
+                  <label for="websiteUrl" class="form-label fw-bold"><i class="fas fa-link me-2"></i> Site URL</label>
+                  <input type="text" class="form-control" id="websiteUrl" placeholder="(https or http)://example.com">
+                  <p id="error2" class="ps-2 opacity-0">Site URL must be a valid one</p>
+                </div>
+
+                <div class="button text-center ">
+                  <button disabled class="btn btn-color px-5" id="btnSubmit" >Submit</button>
+                </div>
+
+              </div>
+            </div><!--content-->
+
+            <div class="show">
+              <table class="w-100 mt-4 text-center " >
+                <thead >
+                  <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead >
+
+                <tbody id="tBody">
+                  
+                </tbody>
+              </table>
+            </div><!--table-->
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="color d-flex justify-content-center align-items-center">
+      <i class="fa-solid fa-gear fa-spin"></i>
+      <div class="content-bro">
+        <div class="content d-flex flex-wrap justify-content-evenly">
+        <i class="fas fa-moon" id="moon"></i>
+        <i class="fas fa-sun" id="sun"></i>
+        <i class="fa-solid fa-brush red" id="red"></i>
+        <i class="fa-solid fa-brush green" id="green"></i>
+        <i class="fa-solid fa-brush blue" id="blue"></i>
+        <i class="fa-solid fa-brush purple" id="purple"></i>
+        <i class="fa-solid fa-brush orange" id="orange"></i>
+        <i class="fa-solid fa-brush teal" id="teal"></i>
+      </div>
+      </div>
+    </div>
+  
+
+    <!------------------- js ---------------->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
