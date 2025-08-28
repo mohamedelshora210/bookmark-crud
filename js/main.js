@@ -238,7 +238,7 @@ function displayBookmark(arr){
     {
         cartoona +=`<tr>
                     <td>${i + 1}</td>
-                    <td>${arr[i].name}</td>
+                    <td class="fw-bolder">${arr[i].name}</td>
                     <td><a href="${arr[i].url}" target="_blank"><button id="visit" class="btn btn-visit"><i class="fas fa-eye"></i> <span>Visit</span></button></a></td>
                     <td><button onclick="deleteBookmark(${i})" class="btn btn-delete"><i class="fas fa-trash-can"></i> <span>Delete</span></button></td>
                   </tr>`

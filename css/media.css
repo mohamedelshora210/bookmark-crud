@@ -22,9 +22,9 @@
         .btn-visit , .btn-delete
         {
             display: flex;
-            gap: 5px;
             align-items: center;
             overflow: hidden;
+            padding-inline: 6px;
            
         }
          .btn-visit:hover , .btn-delete:hover
@@ -44,11 +44,11 @@
         }
         .btn-visit:hover i 
         {
-           transform: translateX(110%) scale(1.4) !important;
+           transform: translateX(90%) scale(1.4) !important;
         }
         .btn-delete:hover i
         {
-            transform: translateX(200%)   scale(1.4) !important ;
+            transform: translateX(170%)   scale(1.4) !important ;
         }
         .btn-visit span 
         {
