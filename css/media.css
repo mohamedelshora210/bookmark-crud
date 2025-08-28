@@ -27,6 +27,10 @@
             overflow: hidden;
            
         }
+         .btn-visit:hover , .btn-delete:hover
+         {
+            transform: scale(1) !important;
+         }
         .btn-visit i 
         {
 
@@ -40,21 +44,21 @@
         }
         .btn-visit:hover i 
         {
-           transform: translateX(130%) scale(1.4) !important;
+           transform: translateX(110%) scale(1.4) !important;
         }
         .btn-delete:hover i
         {
-            transform: translateX(250%)   scale(1.4) !important ;
+            transform: translateX(200%)   scale(1.4) !important ;
         }
         .btn-visit span 
         {
-            font-size: 18px;
+            font-size: 14px;
             transition: all .5s;
             transform: translateX(-30%);
         }
         .btn-delete span
         {
-              font-size: 18px;
+              font-size: 14px;
             transition: all .5s;
             transform: translateX(-10%);
         }
