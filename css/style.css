@@ -332,6 +332,7 @@ body::selection
     0%
     {
         opacity: 0;
+       
     }
     50%
     {
@@ -340,5 +341,6 @@ body::selection
     100%
     {
         opacity: 1;
+        
     }
 }

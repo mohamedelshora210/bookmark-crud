@@ -12,4 +12,59 @@
         }
         
     }
+    table 
+    {
+         a 
+            {
+                text-decoration: none;
+                color: inherit;
+            }
+        .btn-visit , .btn-delete
+        {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            overflow: hidden;
+           
+        }
+        .btn-visit i 
+        {
+
+            transform: translateX(-200%);
+            transition: all .5s;  
+        }
+        .btn-delete i
+        {
+            transform: translateX(-200%);
+            transition: all .5s;  
+        }
+        .btn-visit:hover i 
+        {
+           transform: translateX(130%) scale(1.4) !important;
+        }
+        .btn-delete:hover i
+        {
+            transform: translateX(250%)   scale(1.4) !important ;
+        }
+        .btn-visit span 
+        {
+            font-size: 18px;
+            transition: all .5s;
+            transform: translateX(-30%);
+        }
+        .btn-delete span
+        {
+              font-size: 18px;
+            transition: all .5s;
+            transform: translateX(-10%);
+        }
+        .btn-visit:hover span 
+        {
+          transform: translateX(200%);
+        }
+        .btn-delete:hover span
+        {
+            transform: translateX(200%);
+        }
+    }
 }
