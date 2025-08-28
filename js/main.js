@@ -16,6 +16,8 @@ var bookmarkNameInput = document.getElementById("bookmarkName");
 var websiteUrlInput = document.getElementById("websiteUrl");
 var btnSubmit = document.getElementById("btnSubmit");
 var tBody = document.getElementById("tBody");
+var loader = document.getElementById("loading");
+var load = document.getElementById("loader");
 
 
 
@@ -29,7 +31,6 @@ function darkMode()
     body.classList.remove("orange");
     body.classList.remove("teal");
     header.classList.add("smooth");
-
 }
 function lightMode()
 {
@@ -255,6 +256,16 @@ function deleteBookmark(deleteIndex){
 }
 btnSubmit.addEventListener("click" , addBookmark);
 
+//loading func
 
 
+window.addEventListener("load" , function(){
+    setTimeout(function(){
+        loader.classList.add("open");
+        load.style.opacity="0";
+        setTimeout(function(){
+            loader.style.display="none";
+        },500)
+    } , 2500)
+})
 
