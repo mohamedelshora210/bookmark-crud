@@ -121,77 +121,127 @@ teal.addEventListener("click" , tealMode);
 
 
 
-var regexNameInput = /^[A-Za-z]{3,}$/;
-var regexUrlInput = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)$/
+// var regexNameInput = /^[A-Za-z]{3,}$/;
+// var regexUrlInput = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)$/
 
-function validationNameInput(){
-    if(regexNameInput.test(bookmarkNameInput.value) == false)
+function validationForm(element , parag){
+    var regex = {
+        bookmarkName :  /^[A-Za-z]{3,}$/,
+        websiteUrl: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)$/
+    }
+    if(regex[element.id].test(element.value) == false)
     {
-        bookmarkNameInput.classList.add("is-invalid");
-        bookmarkNameInput.classList.add("in-valid");
-        bookmarkNameInput.classList.remove("is-valid");
-        bookmarkNameInput.classList.remove("valid");
-        error.classList.remove("opacity-0");
-        error.classList.add("error");
+        element.classList.add("is-invalid");
+        element.classList.add("in-valid");
+        element.classList.remove("is-valid");
+        element.classList.remove("valid");
+        parag.classList.remove("opacity-0");
+        parag.classList.add("error");
         btnSubmit.setAttribute("disabled" , "true");
-        if(bookmarkNameInput.value == "")
+        if(element.value == "")
             {
-                error.classList.add("opacity-0");
-                bookmarkNameInput.classList.remove("in-valid");
-                bookmarkNameInput.classList.remove("is-invalid");
+                parag.classList.add("opacity-0");
+                element.classList.remove("in-valid");
+                element.classList.remove("is-invalid");
                 
             }
         return false;
     }
     else
     {
-        bookmarkNameInput.classList.add("is-valid");
-        bookmarkNameInput.classList.add("valid");
-        error.classList.add("opacity-0");
-        bookmarkNameInput.classList.remove("is-invalid");
-        bookmarkNameInput.classList.remove("in-valid");
+        element.classList.add("is-valid");
+        element.classList.add("valid");
+        parag.classList.add("opacity-0");
+        element.classList.remove("is-invalid");
+        element.classList.remove("in-valid");
+       
+          if (
+        regex.bookmarkName.test(bookmarkNameInput.value) &&
+        regex.websiteUrl.test(websiteUrlInput.value)
+    ) {
         btnSubmit.removeAttribute("disabled");
-         
-        return true;
-    }
-    
-}
-
-function validationUrlInput(){
-    if(regexUrlInput.test(websiteUrlInput.value) == false)
-    {
-        websiteUrlInput.classList.add("is-invalid");
-        websiteUrlInput.classList.add("in-valid");
-        websiteUrlInput.classList.remove("is-valid");
-        websiteUrlInput.classList.remove("valid");
-        error2.classList.remove("opacity-0");
-        error2.classList.add("error2");
+    } else {
         btnSubmit.setAttribute("disabled" , "true");
-        if(websiteUrlInput.value == "")
-            {
-                error2.classList.add("opacity-0");
-                websiteUrlInput.classList.remove("in-valid");
-                websiteUrlInput.classList.remove("is-invalid");
-                
-            }
-        return false;
     }
-    else
-    {
-        websiteUrlInput.classList.add("is-valid");
-        websiteUrlInput.classList.add("valid");
-        error2.classList.add("opacity-0");
-        websiteUrlInput.classList.remove("is-invalid");
-        websiteUrlInput.classList.remove("in-valid");
-        btnSubmit.removeAttribute("disabled");
-         
+
         return true;
     }
-    
 }
+// function validationNameInput(){
+//     if(regexNameInput.test(bookmarkNameInput.value) == false)
+//     {
+//         bookmarkNameInput.classList.add("is-invalid");
+//         bookmarkNameInput.classList.add("in-valid");
+//         bookmarkNameInput.classList.remove("is-valid");
+//         bookmarkNameInput.classList.remove("valid");
+//         error.classList.remove("opacity-0");
+//         error.classList.add("error");
+//         btnSubmit.setAttribute("disabled" , "true");
+//         if(bookmarkNameInput.value == "")
+//             {
+//                 error.classList.add("opacity-0");
+//                 bookmarkNameInput.classList.remove("in-valid");
+//                 bookmarkNameInput.classList.remove("is-invalid");
+                
+//             }
+//         return false;
+//     }
+//     else
+//     {
+//         bookmarkNameInput.classList.add("is-valid");
+//         bookmarkNameInput.classList.add("valid");
+//         error.classList.add("opacity-0");
+//         bookmarkNameInput.classList.remove("is-invalid");
+//         bookmarkNameInput.classList.remove("in-valid");
+//         btnSubmit.removeAttribute("disabled");
+         
+//         return true;
+//     }
+    
+// }
 
-bookmarkNameInput.addEventListener("input" , validationNameInput);
-websiteUrlInput.addEventListener("input" , validationUrlInput);
+// function validationUrlInput(){
+//     if(regexUrlInput.test(websiteUrlInput.value) == false)
+//     {
+//         websiteUrlInput.classList.add("is-invalid");
+//         websiteUrlInput.classList.add("in-valid");
+//         websiteUrlInput.classList.remove("is-valid");
+//         websiteUrlInput.classList.remove("valid");
+//         error2.classList.remove("opacity-0");
+//         error2.classList.add("error2");
+//         btnSubmit.setAttribute("disabled" , "true");
+//         if(websiteUrlInput.value == "")
+//             {
+//                 error2.classList.add("opacity-0");
+//                 websiteUrlInput.classList.remove("in-valid");
+//                 websiteUrlInput.classList.remove("is-invalid");
+                
+//             }
+//         return false;
+//     }
+//     else
+//     {
+//         websiteUrlInput.classList.add("is-valid");
+//         websiteUrlInput.classList.add("valid");
+//         error2.classList.add("opacity-0");
+//         websiteUrlInput.classList.remove("is-invalid");
+//         websiteUrlInput.classList.remove("in-valid");
+//         btnSubmit.removeAttribute("disabled");
+         
+//         return true;
+//     }
+    
+// }
+
+// bookmarkNameInput.addEventListener("input" , validationNameInput);
+// websiteUrlInput.addEventListener("input" , validationUrlInput);
+
+bookmarkNameInput.addEventListener("input" , function(){
+    validationForm(bookmarkNameInput , error)
+});
+websiteUrlInput.addEventListener("input" , function(){
+    validationForm(websiteUrlInput , error2)
+});
 
 var bookmarkList;
 if(localStorage.getItem("bookmarks") != null)
@@ -205,7 +255,7 @@ else
 }
 //add website func
 function addBookmark(){
-   if(validationNameInput() == true && validationUrlInput() == true)
+   if(validationForm(bookmarkNameInput , error) == true && validationForm(websiteUrl , error2) == true)
    {
     var bookmark = {
         name : bookmarkNameInput.value,
